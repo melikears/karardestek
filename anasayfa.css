@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,100;1,400;1,500&display=swap');
+
+*{
+    font-family: 'Roboto',sans-serif;
+}
+
+
+ul{
+    
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    text-align: center;
+}
+
+ul#main li{
+    float: left;
+    position: relative;
+    width:150px;
+}
+ul#main li ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 40px;
+}
+
+ul li a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(2, 123, 89);
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    background-color:rgb(1, 85, 61); 
+}
+
+ul#main li:hover ul{
+    display: block;
+}
