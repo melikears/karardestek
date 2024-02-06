@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ürünler</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Stil dosyası: style.css */
+
+/* Tablo stilleri */
+
+:root {
+    --color-primary: #ffffff;
+    --color-white: #e9e9e9;
+    --color-black: #314401;
+    --color-black-1: #212b38;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    border: 4px solid #ACC849; /* 2 piksel kalınlığında siyah bir çerçeve */
+    padding: 10px; /* İçerik ile çerçeve arasında boşluk bırakmak için */
+  }
+  
+  body {
+    font-family: sans-serif;
+   
+  }
+  
+  .logo {
+    color: var(--color-white);
+    font-size: 30px;
+  }
+  
+  .logo span {
+    color: var(--color-primary);
+  }
+  
+  .menu-bar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  
+    position: relative;
+  }
+  
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+  
+    position: relative;
+  }
+  
+  .menu-bar ul li a {
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+  
+    transition: all 0.3s;
+  }
+  
+  .menu-bar ul li a:hover {
+    color: var(--color-primary);
+  }
+  
+  .fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+  }
+  
+  /* dropdown menu style */
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .dropdown-menu-1 {
+    display: none;
+  }
+  
+  .dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+  }
+  
+  .hero {
+    height: calc(100vh - 80px);
+    background-image: url(./images/eko.png);
+    background-position: center;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  h2{
+    margin-top:30px;
+  }
+  
+  .container {
+    margin-top:-200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* İçerik dikeyde ortalanacak */
+  }
+  
+  .input-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px; /* İstenilen genişlik */
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    flex: 1; /* Giriş kutusunu tüm alanı kaplaması için */
+    padding: 8px;
+    margin-right: 10px; /* İkon ile giriş kutusu arasındaki boşluk */
+  }
+  
+  .input-box i {
+    font-size: 20px; /* İkon boyutunu ayarlamak için */
+  }
+  
+
+  .select-container {
+    margin-top: 20px; /* Yukarıdan boşluk */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tablo stilleri */
+/* Tablo stilleri */
+/* Tablo stilleri */
+/* Tablo stilleri */
+table {
+  width: 60%; /* Tablo genişliği yüzde olarak ayarlanıyor */
+  border-collapse: collapse;
+  margin: 70px auto; /* Tabloyu yatayda ve dikeyde ortalar */
+}
+
+
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 5px; /* İçerik boşluğu azaltılıyor */
+  text-align: left;
+  font-size: 12px; /* Yazı boyutu küçültülüyor */
+}
+
+/* Tablo başlıklarının yazı tipi ve boyutu */
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 14px; /* Başlık yazı boyutu düşürülüyor */
+}
+
+
+/* Tablo satırlarının arka plan rengi değiştirme */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Tablo başlıklarının yazı tipi ve boyutu */
+th {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Satırların üzerine gelindiğinde renk değişimi */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Satırların üzerine gelindiğinde renk değişimi */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Son iki satırın stili */
+/* Son iki satırın stili */
+tbody tr:nth-last-child(-n+2) {
+  background-color: rgba(255, 99, 71, 0.7); /* Kırmızı tonunda bir renk */
+  color: #fff; /* Yazı rengini beyaz yapar */
+  font-size: 16px; /* Yazı boyutunu büyütür */
+}
+
+/* Diğer satırların stili */
+tbody tr:not(:nth-last-child(-n+2)) {
+  background-color: rgba(46, 139, 87, 0.7); /* Yeşil tonunda bir renk */
+  color: #fff; /* Yazı rengini beyaz yapar */
+  font-size: 16px; /* Yazı boyutunu büyütür */
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+    <div class="menu-bar">
+        <h1 class="logo">Eko<span>Market.</span></h1>
+        <ul>
+          
+          <li><a href="/urunler.html">Ürünler</a></li>
+          <li><a href="/subeler.html">Şubeler</a></li>                
+          <li><a href="/satislar.html">Satışlar</a></li>
+          
+  
+        </ul>
+      </div>
+
+      
+
+  <table id="yeni_giderTable">
+    <thead>
+      <tr>
+        <th>Şube Adı</th>
+        <th>Toplam Ciro</th>
+        <th>Gider Miktarı</th>
+        <th>Net Kar</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Buraya JS ile doldurulacak -->
+    </tbody>
+  </table>
+
+  <script>
+    fetch('/net_kar_view')
+  .then(response => response.json())
+  .then(data => {
+    const tableBody = document.querySelector('#yeni_giderTable tbody');
+
+    data.forEach(row => {
+      const tr = document.createElement('tr');
+
+      const subeAdi = document.createElement('td');
+      subeAdi.textContent = row.sube_adi;
+      tr.appendChild(subeAdi);
+
+      const ciro = document.createElement('td');
+      ciro.textContent = row.toplam_ciro;
+      tr.appendChild(ciro);
+
+      const gider = document.createElement('td');
+      gider.textContent = row.gider_miktari;
+      tr.appendChild(gider);
+
+      const kar = document.createElement('td');
+      kar.textContent = row.net_kar;
+      tr.appendChild(kar);
+
+      const action = document.createElement('td');
+      if (row.net_kar < 0) {
+        action.textContent = 'Şube müdürleriyle iletişime geçilebilir. Şube kapatılması önerilmektedir.';
+        action.setAttribute('colspan', '4'); // Satırın tüm sütunlarını kaplar
+        action.style.color = 'white'; // Yazı rengini kırmızı yapar
+      } else {
+        action.textContent = 'Şube faaliyete devam edebilir.';
+        action.setAttribute('colspan', '4'); // Satırın tüm sütunlarını kaplar
+        action.style.color = 'white'; // Yazı rengini yeşil yapar
+      }
+      tr.appendChild(action);
+
+      tableBody.appendChild(tr);
+    });
+  })
+  .catch(error => console.error('Veri alınamadı:', error));
+
+  </script>
+
+<div style="width: 500px; height: 400px; position:absolute;left: 450px; top: 400px; z-index: 0;">
+  <canvas id="myChar"></canvas>
+</div>
+
+
+<script>
+
+  fetch('/datask')
+  .then((response) => response.json())
+  .then((data) => {
+    const ctx = document.getElementById('myChar').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: {
+      responsive: true,
+      plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Bölgelerde Bulunan Mağaza Sayıları '
+    }
+  }
+},
+});
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+   });
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+  
+</body>
+</html>

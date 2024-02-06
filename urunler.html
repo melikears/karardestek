@@ -1,0 +1,442 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="sayfaaa.css" />
+    <title>dropdown Menu</title>
+    <style>
+        :root {
+    --color-primary: #ffffff;
+    --color-white: #e9e9e9;
+    --color-black: #314401;
+    --color-black-1: #212b38;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    border: 4px solid #ACC849; /* 2 piksel kalınlığında siyah bir çerçeve */
+    padding: 10px; /* İçerik ile çerçeve arasında boşluk bırakmak için */
+    font-size: 15px;
+  }
+  
+  body {
+    font-family: sans-serif;
+   
+  }
+  
+  .logo {
+    color: var(--color-white);
+    font-size: 30px;
+  }
+  
+  .logo span {
+    color: var(--color-primary);
+  }
+  
+  .menu-bar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  
+    position: relative;
+  }
+  
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+  
+    position: relative;
+  }
+  
+  .menu-bar ul li a {
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+  
+    transition: all 0.3s;
+  }
+  
+  .menu-bar ul li a:hover {
+    color: var(--color-primary);
+  }
+  
+  .fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+  }
+  
+  /* dropdown menu style */
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .dropdown-menu-1 {
+    display: none;
+  }
+  
+  .dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+  }
+  
+  .hero {
+    height: calc(100vh - 80px);
+    background-image: url(./images/eko.png);
+    background-position: center;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  h2{
+    margin-top:30px;
+  }
+  
+  .container {
+    margin-top:-200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* İçerik dikeyde ortalanacak */
+  }
+  
+  .input-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px; /* İstenilen genişlik */
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    flex: 1; /* Giriş kutusunu tüm alanı kaplaması için */
+    padding: 8px;
+    margin-right: 10px; /* İkon ile giriş kutusu arasındaki boşluk */
+  }
+  
+  .input-box i {
+    font-size: 20px; /* İkon boyutunu ayarlamak için */
+  }
+  
+
+  .select-container {
+    margin-top: 20px; /* Yukarıdan boşluk */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tablo */
+/* Seçenek listesi */
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white;
+  width: 200px;
+}
+
+/* Buton */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Tablo */
+/* Tablo */
+table {
+  width: 20%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  position: relative;
+  left: -250px;
+  margin-top: -20px; /* Tabloyu yukarı çekmek için negatif bir margin değeri */
+}
+
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Select seçeneği */
+option:first-child {
+  color: #999;
+}
+
+.not {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border: 3px solid #3fa249;
+  margin: 10px; /* Tablo ve grafik arasına boşluk eklemek için */
+  color:orange;
+  font-size: 20px;
+}
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="menu-bar">
+      <h1 class="logo">Eko<span>Market.</span></h1>
+      <ul>
+        <li><a href="urunler.html">Ürünler</a></li>
+        <li><a href="subeler.html">Şubeler</a></li>                
+        <li><a href="satislar.html">Satışlar</a></li>
+
+      </ul>
+    </div>
+
+
+    <div class="not">
+      Ürün bazında elde edilen karlardan yola çıkarak en çok kar getirisine sahip olan ürün satışını arttırmaya yönelik çalışmalar yapılmalıdır.
+    </div>
+    
+
+    
+    <form id="filterForm">
+      <select id="category" name="category">
+          <option value="1">Meyve,Sebze</option>
+          <option value="2">Et,Tavuk,Balık</option>
+          <option value="3
+          ">Süt,Kahvaltılık</option>
+          <option value="4">Temel Gıda</option>
+          <option value="5">İçecek</option>
+          <option value="6">Dondurma</option>
+          <option value="7">Atıştırmalık</option>
+          <option value="8">Fırın,Pastane</option>
+          <option value="9
+          ">Temizlik</option>
+          <option value="10">Kişisel Bakım</option>
+          <option value="11">Ev, Yaşam</option>
+          
+
+      </select>>
+
+    <button type="submit">Filtrele</button>
+  </form>
+  
+    <table id="urunlerTable">
+      <thead>
+        <tr>
+          <th>Ürün Adı</th>
+          <th>Net Kar</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Data will be displayed here -->
+      </tbody>
+    </table>
+
+     <script>
+      document.getElementById('filterForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const category = document.getElementById('category').value;
+        
+  
+        fetch(`/filtere?category=${category}`)
+          .then(response => response.json())
+          .then(data => {
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = ''; // Clear previous data
+  
+            data.forEach(row => {
+              const tr = document.createElement('tr');
+  
+              const urunAdi = document.createElement('td');
+              urunAdi.textContent = row.urun_adi;
+              tr.appendChild(urunAdi);
+  
+              const kar = document.createElement('td');
+              kar.textContent = row.net_kar;
+              tr.appendChild(kar);
+  
+              tableBody.appendChild(tr);
+            });
+          })
+          .catch(error => console.error('Error fetching data:', error));
+      });
+    </script>
+    
+    <div style="width: 400px; height: 400px; position: absolute; left: 800px;; top: 200px; z-index: 2;
+">
+  <canvas id="myChart"> </canvas>
+</div>
+    <script>
+      document.getElementById('filterForm').addEventListener('submit', (event) => {
+          event.preventDefault();
+          const category = document.getElementById('category').value;
+
+         fetch(`/filtere?category=${category}`)
+            .then(response => response.json())
+            .then(data => {
+                const labels = [];
+                const prices = [];
+                
+
+                data.forEach(row => {
+                    labels.push(row.urun_adi);
+                    prices.push(row.net_kar);
+                    
+                });
+
+                const previousChart = Chart.getChart('myChart');
+                if (previousChart) {
+                previousChart.destroy();
+            }
+
+
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Maliyet',
+                            data: prices,
+                            backgroundColor: ['rgba(50 ,205 ,50)',
+                            'rgba(0 ,255 ,127)',
+                            'rgba(32 ,178 ,170)',
+                            'rgba(255 ,215 ,0)',
+                            'rgba(220 ,185 ,70)',
+                            'rgba(150 ,205 ,95)',
+                          ],
+                            borderColor: ['rgba(50 ,205 ,50)',
+                            'rgba(0 ,255 ,127)',
+                            'rgba(32 ,178 ,170)',
+                            'rgba(255 ,215 ,0)',
+                            'rgba(220 ,185 ,70)',
+                            'rgba(150 ,205 ,95)',
+                          ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+  });
+    </script>
+
+
+<!-- <div style="width: 500px; height: 400px; position:absolute;left: 1000px; top: 200px; z-index: 0;">
+  <canvas id="myChar"></canvas>
+</div>
+
+
+
+
+
+
+
+  <script>
+
+    fetch('/datas')
+    .then((response) => response.json())
+    .then((data) => {
+      const ctx = document.getElementById('myChar').getContext('2d');
+      new Chart(ctx, {
+        type: 'pie',
+        data: data,
+        options: {
+        responsive: true,
+        plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Ürün Bazında Elde Edilen Kar '
+      }
+    }
+  },
+});
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+
+
+
+  
+    </script> -->
+
+
+    
+  </body>
+</html>

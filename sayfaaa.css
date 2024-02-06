@@ -1,0 +1,199 @@
+  :root {
+    --color-primary: #ffffff;
+    --color-white: #e9e9e9;
+    --color-black: #314401;
+    --color-black-1: #212b38;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    border: 4px solid #ACC849; /* 2 piksel kalınlığında siyah bir çerçeve */
+    padding: 10px; /* İçerik ile çerçeve arasında boşluk bırakmak için */
+  }
+  
+  body {
+    font-family: sans-serif;
+   
+  }
+  
+  .logo {
+    color: var(--color-white);
+    font-size: 30px;
+  }
+  
+  .logo span {
+    color: var(--color-primary);
+  }
+  
+  .menu-bar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  
+    position: relative;
+  }
+  
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+  
+    position: relative;
+  }
+  
+  .menu-bar ul li a {
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+  
+    transition: all 0.3s;
+  }
+  
+  .menu-bar ul li a:hover {
+    color: var(--color-primary);
+  }
+  
+  .fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+  }
+  
+  /* dropdown menu style */
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .dropdown-menu-1 {
+    display: none;
+  }
+  
+  .dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+  }
+  
+  .hero {
+    height: calc(100vh - 80px);
+    background-image: url(./images/eko.png);
+    background-position: center;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  h2{
+    margin-top:30px;
+  }
+  
+  .container {
+    margin-top:-200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* İçerik dikeyde ortalanacak */
+  }
+  
+  .input-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px; /* İstenilen genişlik */
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    flex: 1; /* Giriş kutusunu tüm alanı kaplaması için */
+    padding: 8px;
+    margin-right: 10px; /* İkon ile giriş kutusu arasındaki boşluk */
+  }
+  
+  .input-box i {
+    font-size: 20px; /* İkon boyutunu ayarlamak için */
+  }
+  
+
+  .select-container {
+    margin-top: 20px; /* Yukarıdan boşluk */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Stil seçenekleri */
+#kategori {
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 30px;
+  font-size: 16px;
+  border: 5px solid #2e722f;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  width: 300px; /* Örneğin genişliği 300px olarak değiştirin */
+  outline: none; /* Odaklandığında kenarlık rengini kaldırır */
+  transition: border-color 0.3s ease-in-out; /* Kenarlık rengi değişim animasyonu */
+}
+
+/* Seçenekler hover efekti */
+#kategori:hover {
+    border-color: #ACC849;
+}
+
+/* Seçenekler odaklandığında stil */
+#kategori:focus {
+    border-color: #ACC849;
+}
+
+h3{
+  color:orange;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+
+
+
+

@@ -1,0 +1,19 @@
+/* Stil dosyası (denek.css) */
+
+/* Container stilini merkeze hizalama */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Sayfa yüksekliği kadar alana sahip olacak */
+}
+
+/* Seçili alanın stilleri */
+#dersSec {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}

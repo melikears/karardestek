@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <!-- <link rel="stylesheet" href="sayfaaa.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Chart.js Example</title>
+  <style>
+      :root {
+    --color-primary: #ffffff;
+    --color-white: #e9e9e9;
+    --color-black: #314401;
+    --color-black-1: #212b38;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    border: 4px solid #ACC849; /* 2 piksel kalınlığında siyah bir çerçeve */
+    padding: 10px; /* İçerik ile çerçeve arasında boşluk bırakmak için */
+    
+     font-size: 24px;
+    text-align: center;
+        
+  }
+  
+  body {
+    font-family: sans-serif;
+   
+  }
+  
+  .logo {
+    color: var(--color-white);
+    font-size: 30px;
+  }
+  
+  .logo span {
+    color: var(--color-primary);
+  }
+  
+  .menu-bar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  
+    position: relative;
+  }
+  
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu-bar ul li {
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+  
+    position: relative;
+  }
+  
+  .menu-bar ul li a {
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+  
+    transition: all 0.3s;
+  }
+  
+  .menu-bar ul li a:hover {
+    color: var(--color-primary);
+  }
+  
+  .fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+  }
+  
+  /* dropdown menu style */
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .dropdown-menu-1 {
+    display: none;
+  }
+  
+  .dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
+  }
+  
+  .hero {
+    height: calc(100vh - 80px);
+    background-image: url(/images/ekok.png);
+    background-position: center;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  h2{
+    margin-top:30px;
+  }
+  
+  .container {
+    margin-top:-200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* İçerik dikeyde ortalanacak */
+  }
+  
+  .input-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 300px; /* İstenilen genişlik */
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    flex: 1; /* Giriş kutusunu tüm alanı kaplaması için */
+    padding: 8px;
+    margin-right: 10px; /* İkon ile giriş kutusu arasındaki boşluk */
+  }
+  
+  .input-box i {
+    font-size: 20px; /* İkon boyutunu ayarlamak için */
+  }
+  
+
+  .select-container {
+    margin-top: 20px; /* Yukarıdan boşluk */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Diğer stillerinizin üzerine bu eklemeler yapılacak */
+/* ... (Diğer stiller) ... */
+
+/* Grafiğin yer aldığı canvas elementi */
+#myChart {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto; /* Sayfanın ortasına hizalamak için */
+  display: block;
+}
+
+
+/* Tablo stilleri */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Filtre formu stilleri */
+#filterForm {
+  text-align: center;
+  margin: 20px auto;
+}
+
+select, button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Menü stilini buraya ekleyebilirsiniz */
+/* ... (Menü stilleri) ... */
+
+/* Hero ve diğer stiller için gerekli olanlar */
+/* ... (Diğer stiller) ... */
+
+  </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <h1 class="logo">Eko<span>Market.</span></h1>
+    <ul>
+      
+      <li><a href="urunler.html">Ürünler</a></li>
+      <li><a href="subeler.html">Şubeler</a></li>                
+      <li><a href="satislar.html">Satışlar</a></li>
+      
+
+    </ul>
+  
+  </div>
+  
+  
+    
+  <h1>Ürünlere Göre Şubelerdeki Ürün Satış Adetleri</h1>
+  <form id="filterForm">
+      <select id="category" name="category">
+          <option value="Maydanoz">Maydanoz</option>
+          <option value="Soğan">Soğan</option>
+          <option value="Muz Yerli
+          ">Muz Yerli</option>
+          <option value="Domates">Domates</option>
+          <option value="Salam">Salam</option>
+          <option value="Şemsiye">Şemsiye</option>
+          <option value="Karışık Dondurma">Karışık Dondurma</option>
+          <option value="Maraş Dondurma">Maraş Dondurma</option>
+          <option value="Filtre Kahve
+          ">Filtre Kahve</option>
+          <option value="Çam Ağacı">Çam Ağacı</option>
+          <option value="Yağmurluk">Yağmurluk</option>
+          <option value="Kavanoz">Kavanoz</option>
+          <option value="Cips
+          ">Cips</option>
+          <option value="Gofret">Gofret</option>
+          <option value="Börek Çeşitleri">Börek Çeşitleri</option>
+          <option value="Granola">Granola</option>
+
+
+
+      </select>>
+
+    <button type="submit">Filtrele</button>
+  </form>
+
+  <!-- <table id="giysiTable">
+    <thead>
+      <tr>
+        <th>Ürün Adı</th>
+        <th>Adet</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <-- Data will be displayed here 
+    </tbody>
+  </table>-->
+
+  <canvas id="myChart" width="400" height="400"></canvas>
+
+ <script>
+      document.getElementById('filterForm').addEventListener('submit', (event) => {
+          event.preventDefault();
+          const category = document.getElementById('category').value;
+  
+          fetch(`/filter?category=${category}`)
+              .then(response => response.json())
+              .then(data => {
+                  const labels = [];
+                  const prices = [];
+                  
+  
+                  data.forEach(row => {
+                      labels.push(row.sube_adi);
+                      prices.push(row.miktar);
+                      
+                  });
+
+                  const previousChart = Chart.getChart('myChart');
+                  if (previousChart) {
+                  previousChart.destroy();
+              }
+
+  
+                  const ctx = document.getElementById('myChart').getContext('2d');
+                  const myChart = new Chart(ctx, {
+                      type: 'bar',
+                      data: {
+                          labels: labels,
+                          datasets: [{
+                              label: 'Adet',
+                              data: prices,
+                              backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                              borderColor: 'rgba(54, 162, 235, 1)',
+                              borderWidth: 1
+                          }]
+                      },
+                      options: {
+                          scales: {
+                              y: {
+                                  beginAtZero: true
+                              }
+                          }
+                      }
+                  });
+              })
+              .catch(error => console.error('Error fetching data:', error));
+      });
+</script>
+</body>
+</html>

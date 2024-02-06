@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  input, button {
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Renklendirme için kar ve zarar kontrolü */
+  li.positive {
+    background-color: lightgreen;
+  }
+  
+  li.negative {
+    background-color: tomato;
+  }
+  
